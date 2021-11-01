@@ -1,0 +1,6 @@
+[submodule "inpainting-models/lama"]
+	path = inpainting-models/lama
+	url = https://github.com/jaredyam/lama.git
+[submodule "segmentation-models/U-2-Net"]
+	path = segmentation-models/U-2-Net
+	url = https://github.com/jaredyam/U-2-Net.git
