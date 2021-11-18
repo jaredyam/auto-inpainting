@@ -30,3 +30,12 @@ Then, make inference on a single image by running
 ```bash
 (auto-inpainting) $ bash inference.sh <path/to/input-image>
 ```
+
+## Gallery
+|                     Original                      |                        Demo                        |
+|:-------------------------------------------------:|:--------------------------------------------------:|
+| ![](./gallery/original/tyler-nix-6UEyVsw_1lU.png) | ![](./gallery/demo/tyler-nix-6UEyVsw_1lU_mask_after_expansion_demo.gif) |
+| ![](./gallery/original/gianandrea-villa-t4cSB-InqGYvertical.png) | ![](./gallery/demo/gianandrea-villa-t4cSB-InqGYvertical_mask_after_expansion_demo.gif) |
+| ![](./gallery/original/joanna-nix-walkup-tt2Wi_vCXxA.png) | ![](./gallery/demo/joanna-nix-walkup-tt2Wi_vCXxA_mask_after_expansion_demo.gif) |
+| ![](./gallery/original/daniel-lin-pscHZFFOmOI.png) | ![](./gallery/demo/daniel-lin-pscHZFFOmOI_demo.gif) |
+| ![](./gallery/original/clem-onojeghuo-YhgXfs80RJi.png) | ![](./gallery/demo/clem-onojeghuo-YhgXfs80RJi_mask_after_expansion_demo.gif) |
