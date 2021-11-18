@@ -8,13 +8,14 @@
 
 1. Clone this repo to your local filesystem
     ```bash
-    git clone https://github.com/jaredyam/auto-inpainting.git
+    (base) $ git clone https://github.com/jaredyam/auto-inpainting.git
     ```
 2. `cd` to the repo and create an independent virual environment with conda
     ```bash
-    cd <path/to/auto-inpainting>
-    conda create --name auto-inpainting python=3.8
-    pip install -r requirements.txt
+    (base) $ cd <path/to/auto-inpainting>
+    (base) $ conda create --name auto-inpainting python=3.8
+    (base) $ conda activate auto-inpainting
+    (auto-inpainting) $ pip install -r requirements.txt
     ```
 
 ## Inference
@@ -27,5 +28,5 @@ Before making inference, we should first prepare pre-trained models (from the or
 
 Then, make inference on a single image by running
 ```bash
-bash inference.sh <path/to/input-image>
+(auto-inpainting) $ bash inference.sh <path/to/input-image>
 ```
