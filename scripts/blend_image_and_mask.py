@@ -9,7 +9,7 @@ from utils import load_mask
 def blend_image_and_mask(
         image_fpath,
         expand_mask=True,
-        mask__color=(0.45, 0.6, 0.0),
+        mask__color=(0.0, 0.6, 0.45),
         mask__opacity=0.4,
 ):
     image = cv2.imread(image_fpath)
@@ -22,7 +22,7 @@ def blend_image_and_mask(
 
     binary_mask = load_mask(str(mask_fpath))
     bgra_mask = cv2.merge([binary_mask for _ in range(4)])
-    bgra_mask[..., :3] = bgra_mask[..., :3] * mask__color
+    bgra_mask[..., :3] = bgra_mask[..., :3] * mask__color[::-1]
     new_image = cv2.addWeighted(src1=image, alpha=1, src2=bgra_mask, beta=mask__opacity, gamma=0)
 
     outputs_dir = Path('./data/images_after_blending_with_mask')
@@ -41,8 +41,8 @@ if __name__ == '__main__':
         '--mask-color',
         type=float,
         nargs=3,
-        metavar=('blue', 'green', 'red'),
-        default=(0.45, 0.6, 0.0),
+        metavar=('red', 'green', 'blue'),
+        default=(0.0, 0.6, 0.45),
     )
     parser.add_argument('--mask-opacity', type=float, default=0.4)
     args = parser.parse_args()
