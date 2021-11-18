@@ -47,10 +47,9 @@ if __name__ == '__main__':
         polygon=args.polygon,
     )
 
-    mask_fpath = Path(args.mask_fpath).relative_to('.')
+    mask_fpath = Path(args.mask_fpath)
     outputs_dir = Path('./data/masks_after_expansion')
     outputs_dir.mkdir(exist_ok=True)
-    expanded_mask_fpath = (outputs_dir /
-                           f'{mask_fpath.stem}_after_expansion{mask_fpath.suffix}').relative_to('.')
+    expanded_mask_fpath = outputs_dir / f'{mask_fpath.stem}_after_expansion{mask_fpath.suffix}'
     cv2.imwrite(str(expanded_mask_fpath), expanded_binary_mask)
     print(f'Successfully saved expanded mask of mask ({mask_fpath}) in: {expanded_mask_fpath}')
