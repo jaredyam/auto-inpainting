@@ -6,9 +6,9 @@
 
 ## Install
 
-1. Clone this repo to your local filesystem
+1. Clone this repo and dependent submodules to your local filesystem
     ```bash
-    (base) $ git clone https://github.com/jaredyam/auto-inpainting.git
+    (base) $ git clone --recurse-submodules https://github.com/jaredyam/auto-inpainting.git
     ```
 2. `cd` to the repo and create an independent virual environment with conda
     ```bash
